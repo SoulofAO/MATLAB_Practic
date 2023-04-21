@@ -47,8 +47,10 @@ title('График функции y(x)')
 grid on
 
 syms y(x)
-eqn = diff(y,x,2)==exp(x+y)+exp(x-y);
-ySol(x) = dsolve(eqn);
-disp(ySol)
+S=exp(x+y)+exp(x-y);
+dsolve(S)
+
+
+
 
 

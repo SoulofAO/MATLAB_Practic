@@ -32,3 +32,34 @@ y = cos(1-0.5*x)
 diff(y)
 
 
+syms x
+int(sqrt(1+x)/x);
+
+int(cot(x)/(1+x*x));
+
+int(1/(x^3+1*x^2))
+
+int(1/(1+sin(x)))
+
+int(4-x^2,[-2,2])
+a = 2
+b = 2
+
+sqrt(a^2+b^2)
+
+h = 1
+p=2
+
+int(sqrt(2*p*x),[0,h])
+
+pi()*int(sqrt((2*p*x)^2),[0,h])
+
+a = 2
+b = 1
+c = min(a,b)
+4/3*pi()*sqrt(a^2+b^2)*c
+
+
+
+
+
