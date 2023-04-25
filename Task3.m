@@ -35,9 +35,11 @@ cond = y(1) == 0;
 cond2 = subs(diff(y,x),x,1) == 0;
 conds = [cond,cond2]
 
-
-[x,y]=ode45('f2', 1:0.01:10, [1;0]); %1:0.01:10 
+[x,y]=ode45('f2', 1:0.01:10, [1;0]); %1:0.01:10
 plot(x,y, 'g-')
+grid on
+hold on
+plot(x, (log(x).^2)./(2.*x) + (log(x) + 1)./x, 'r:','LineWidth',3)
 
 
 dsolve('Dy = exp(x+y) + exp(x-y)')
