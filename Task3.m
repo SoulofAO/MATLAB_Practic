@@ -35,21 +35,12 @@ cond = y(1) == 0;
 cond2 = subs(diff(y,x),x,1) == 0;
 conds = [cond,cond2]
 
-ySol(x) = dsolve(eqn,conds);
-disp(ySol)
 
-x = linspace(1,10,100);
-y = ySol(x);
-plot(x,y)
-xlabel('x')
-ylabel('y')
-title('График функции y(x)')
-grid on
+[x,y]=ode45('f2', 1:0.01:10, [1;0]); %1:0.01:10 
+plot(x,y, 'g-')
 
-syms y(x)
-S=exp(x+y)+exp(x-y);
-dsolve(S)
 
+dsolve('Dy = exp(x+y) + exp(x-y)')
 
 
 
